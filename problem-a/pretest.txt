@@ -1,0 +1,63 @@
+
+PS C:\Users\jasmi\OneDrive\Documents\UW fall 2023\info 340\problem-01-jasmineLoso> jest problem-a
+ FAIL  problem-a/problem.spec.js
+  Used test-driven development
+    × Used Jest to pre-test code, saved in `pretest.txt` (3 ms)
+  Source code is valid
+    × HTML validates without errors (9 ms)
+    √ CSS validates without errors (171 ms)
+  Has required HTML
+    √ Specifies charset (2 ms)
+    √ Includes page title (1 ms)
+    √ Includes author metadata (1 ms)
+    √ Has a top-level heading (1 ms)
+    √ Has an image (1 ms)
+    √ Includes a paragraph
+    √ Includes a hyperlink in the paragraph
+    √ Includes a list
+    √ List has at least 3 items (1 ms)                                                                                                                                                                                                       
+  Has required CSS                                                                                                                                                                                                                           
+    √ Links in local stylesheet                                                                                                                                                                                                              
+    √ Body has default font size                                                                                                                                                                                                             
+    √ Body has default font family                                                                                                                                                                                                           
+    √ Paragraphs have specified line height (1 ms)                                                                                                                                                                                           
+    √ Images have constrained height                                                                                                                                                                                                         
+    √ Important list item is colored (1 ms)                                                                                                                                                                                                  
+                                                                                                                                                                                                                                             
+  ● Used test-driven development › Used Jest to pre-test code, saved in `pretest.txt`                                                                                                                                                        
+                                                                                                                                                                                                                                             
+    expect(received).toMatch(expected)
+
+    Expected pattern: /FAIL +(problem-a)?\/problem\.spec\.js/
+    Received string:  ""
+
+      18 |     const path = __dirname + '/pretest.txt'
+      19 |     const pretest = fs.readFileSync(path, 'utf-8');
+    > 20 |     expect(pretest).toMatch(/FAIL +(problem-a)?\/problem\.spec\.js/)
+         |                     ^
+      21 |   })
+      22 | })
+      23 |
+
+      at Object.toMatch (problem-a/problem.spec.js:20:21)
+
+  ● Source code is valid › HTML validates without errors
+
+    Error: 'attr-req-value' at line 9, column 28.
+    Error: 'attr-req-value' at line 37, column 13.
+
+      38 |     }
+      39 |
+    > 40 |     await expect(htmlPath).toHaveNoHtmlLintErrorsAsync(lintOpts);
+         |                            ^
+      41 |   })
+      42 |
+      43 |   test('CSS validates without errors', async () => {
+
+      at Object.toHaveNoHtmlLintErrorsAsync (problem-a/problem.spec.js:40:28)
+
+Test Suites: 1 failed, 1 total                                                                                                                                                                                                               
+Tests:       2 failed, 16 passed, 18 total                                                                                                                                                                                                   
+Snapshots:   0 total
+Time:        1.525 s, estimated 2 s
+Ran all test suites matching /problem-a/i.
